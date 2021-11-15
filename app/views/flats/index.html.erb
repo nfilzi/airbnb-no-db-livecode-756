@@ -1,15 +1,19 @@
-<h1>Check out all our amazing flats!</h1>
+<div class="container mt-3">
+  <h1 class="mb-3">Check out all our amazing flats!</h1>
 
-<div class="cards">
-  <% @flats.each do |flat| %>
-    <div class="card-trip">
-      <img src="<%= flat["imageUrl"] %>" />
-      <div class="card-trip-infos">
-        <div>
-          <h2><%= flat["name"] %></h2>
+  <div class="cards">
+    <% @flats.each do |flat| %>
+      <div class="card card-trip position-relative">
+        <%= image_tag flat["imageUrl"] %>
+
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= flat["name"] %></h2>
+          </div>
+          <h2 class="card-trip-pricing"><%= flat["priceCurrency"] %><%= flat["price"] %> </h2>
         </div>
-        <h2 class="card-trip-pricing"><%= flat["priceCurrency"] %><%= flat["price"] %> </h2>
+        <%= link_to '', flat_path(flat["id"]), {class: "stretched-link"} %>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

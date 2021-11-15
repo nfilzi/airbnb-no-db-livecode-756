@@ -1,2 +1,10 @@
-<h1>Flats#show</h1>
-<p>Find me in app/views/flats/show.html.erb</p>
+<div class="container mt-3">
+  <%= link_to "Tous appartements", root_path %>
+
+  <div class="banner mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @flat["imageUrl"] %>);">
+    <div class="container h-100 d-flex align-items-start flex-column justify-content-around">
+      <h1><%= @flat["name"] %></h1>
+      <a class="btn btn-flat" href="#">Book now for <%= @flat["priceCurrency"] %><%= @flat["price"] %></a>
+    </div>
+  </div>
+</div>
