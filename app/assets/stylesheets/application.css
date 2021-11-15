@@ -1,0 +1,101 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family:  "Roboto";
+}
+
+.card-trip {
+ overflow: hidden;
+ background: white;
+ box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-trip > img {
+ height: 200px;
+ width: 100%;
+ object-fit: cover;
+}
+
+.card-trip h2 {
+ font-size: 16px;
+ font-weight: bold;
+ margin: 0;
+}
+
+.card-trip p {
+ font-size: 12px;
+ opacity: .7;
+ margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+ padding: 16px;
+ display: flex;
+ justify-content: space-between;
+ align-items: flex-end;
+ position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+ position: absolute;
+ right: 16px;
+ top: -20px;
+ width: 40px;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+
